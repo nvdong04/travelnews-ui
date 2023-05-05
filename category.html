@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>
+            Travel News
+        </title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <script src="ckeditor/ckeditor.js">
+        </script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
+                <link href="./assets/css/style.css" rel="stylesheet"/>
+                <link href="./assets/css/grid.css" rel="stylesheet"/>
+                <link href="./assets/css/responsive.css" rel="stylesheet"/>
+                <link href="./assets/fonts/fontawesome-pro-5.12.0-web/css/all.min.css" rel="stylesheet"/>
+            </link>
+        </link>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="grid wide full-wrap">
+                <div class="navbar-wrap ">
+                    <div class="navbar-header">
+                        <label class="navbar-toggle" for="menu-check">
+                            <i class="navbar-toggle-icon fas fa-bars">
+                            </i>
+                        </label>
+                        <input hidden="" id="menu-check" name="" type="checkbox"/>
+                        <a class="navbar-logo" href="/">
+                            TravelNews.com
+                        </a>
+                        <label class="navbar-overlay" for="menu-check">
+                        </label>
+                        <!--begin NAV mobile,table -->
+                        <div class="navbar-mobile-collapse">
+                            <label class="navbar-mobile-close" for="menu-check">
+                                <i class="navbar-mobile-close-icon far fa-times-circle">
+                                </i>
+                            </label>
+                            <ul class="navbar-moblie-menu">
+                                <li class="nav-moblie-menu-item">
+                                    <a class="nav-moblie-menu-item-link" href="~/Home">
+                                        Trang Chủ
+                                    </a>
+                                </li>
+                                <li class="nav-moblie-menu-item">
+                                    <a class="nav-moblie-menu-item-link" href="~/Tonghop.aspx">
+                                        Tổng Hợp
+                                    </a>
+                                    <ul class="nav-moblie-sub-menu">
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" onclick="preventDefault()">
+                                                Văn hoá
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Lehoi">
+                                                Lễ hội
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Amthuc">
+                                                Ẩm thực
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Danhthang">
+                                                Danh thắng
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-moblie-menu-item">
+                                    <a class="nav-moblie-menu-item-link" onclick="preventDefault()">
+                                        Việt Nam
+                                    </a>
+                                    <ul class="nav-moblie-sub-menu">
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Hanoi">
+                                                Hà nội
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Halong">
+                                                Hạ long
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Danang">
+                                                Đà nẵng
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-moblie-menu-item">
+                                    <a class="nav-moblie-menu-item-link" onclick="preventDefault()">
+                                        Thế Giới
+                                    </a>
+                                    <ul class="nav-moblie-sub-menu">
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Hanoi">
+                                                Singapore
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Halong">
+                                                Dubai
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Danang">
+                                                Trung quốc
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-moblie-menu-item">
+                                    <a class="nav-moblie-menu-item-link" onclick="preventDefault()">
+                                        Sự Kiện
+                                    </a>
+                                    <ul class="nav-moblie-sub-menu">
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Vietnam">
+                                                Việt Nam
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Thegioi">
+                                                Thế Giới
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--end NAV mobile,table -->
+                    </div>
+                    <!--begin NAV PC -->
+                    <div class="navbar-collapse collapse hide-on-mobile-tablet" id="nav">
+                        <ul class="nav navbar-menu">
+                            <li class="menu-item">
+                                <a class="menu-item-link" href="~/Home">
+                                    <i class="fas fa-home">
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-item-link" href="~/Tonghop">
+                                    Tổng Hợp
+                                </a>
+                                <ul class="nav-sub-menu">
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Vanhoa">
+                                            Văn hoá
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Lehoi">
+                                            Lễ hội
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Amthuc">
+                                            Ẩm thực
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Danhthang">
+                                            Danh thắng
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-item-link" href="~/CamnangVN">
+                                    Việt Nam
+                                </a>
+                                <ul class="nav-sub-menu">
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Hanoi">
+                                            Hà nội
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Halong">
+                                            Hạ long
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Danang">
+                                            Đà nẵng
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-item-link" href="~/Thegioi">
+                                    Thế Giới
+                                </a>
+                                <ul class="nav-sub-menu">
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Hanoi">
+                                            Singapore
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Halong">
+                                            Dubai
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Danang">
+                                            Trung quốc
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-item-link" href="~/Sukien">
+                                    Sự Kiện
+                                </a>
+                                <ul class="nav-sub-menu">
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Vietnam">
+                                            Việt Nam
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Thegioi">
+                                            Thế Giới
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="menu-item nav-avatar">
+                            <!-- <a class="nav-avatar__link" href="/Login.aspx">
+                                Đăng nhập
+                            </a> -->
+                            <div class="nav-avatar-wrap">
+                                <div class="nav-avatar__user">
+                                    Mai Hoa
+                                </div>
+                                <ul class="nav-sub-menu nav-avatar__list">
+                                    <li class="sub-menu-item nav-avatar__list-item">
+                                        <a class="sub-menu-item-link nav-avatar__item-link" href="/QuanLiBaiViet.aspx">
+                                            Quản lí bài viết
+                                        </a>
+                                    </li>
+                                    <li class="nav-avatar__list-item">
+                                        <button class="nav-avartar__btn sub-menu-item-link nav-avatar__item-link" id="btnlogout" name="btn-logout" onclick="btnLogout_click" type="submit" value="true">
+                                            Thoát
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End NAV PC -->
+                </div>
+            </div>
+        </div>
+        <div style="overflow:hidden;">
+            <div class="container body-content">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-7 m-7 c-12">
+                            <div class="main-left">
+                                <div class="main-short-bar" id="mainShortBar">
+                                    <ul class="short-bar__list">
+                                        <li class="short-bar__item">
+                                            <a class="short-bar__item-link" href="">
+                                                Trang chủ
+                                            </a>
+                                        </li>
+                                        <li class="short-bar__item">
+                                            <a class="short-bar__item-link" href="">
+                                                Tổng hợp
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Su kien-->
+                                <div class="main-wrap" id="mainwrap">
+                                    <div class="main-wrap__title">
+                                        <h1>
+                                            Tổng hợp
+                                        </h1>
+                                    </div>
+                                    <div class="main-wrap__list">
+                                        <div class="main-wrap__item">
+                                            <div class="main-wrap__item-img">
+                                                <a class="main-wrap__item-link" href="#">
+                                                    <img alt="Sân Golf Bà Nà Hills, Cù Lao Chàm và 7 khách sạn Vinpearl tạm ngừng đón khách vì dịch bệnh Covid-19" src="./assets/img/sukien1/360_crop_hoi_an.jpg">
+                                                    </img>
+                                                </a>
+                                            </div>
+                                            <div class="main-wrap__item-desc">
+                                                <div class="main-wrap__item-desc-title">
+                                                    <h3>
+                                                        <a class="main-wrap__item-desc-link" href="">
+                                                            Sân Golf Bà Nà Hills, Cù Lao Chàm và 7 khách sạn Vinpearl tạm ngừng đón khách vì dịch bệnh Covid-19
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="main-wrap__item-desc-content hide-on-mobile-tablet">
+                                                    <p>
+                                                        Sân Golf Bà Nà Hills - Đà Nẵng, đảo Cù Lao Chàm - Quảng Nam thông báo tạm ngưng đón khách du lịch vì tình trạng lây lan dịch bệnh Covid-19 hiện tại.
+                                                    </p>
+                                                </div>
+                                                <div class="main-wrap__item-desc-time">
+                                                    11/03/2020
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main-wrap__item">
+                                            <div class="main-wrap__item-img">
+                                                <a class="main-wrap__item-link" href="#">
+                                                    <img alt="Bamboo Airways tặng khách vé chiều về toàn bộ các chặng nội địa hạng thương gia" src="https://dulichvietnam.com.vn/vnt_upload/news/03_2020/thumbs/360_crop_bamboo_airways_2_1.jpg">
+                                                    </img>
+                                                </a>
+                                            </div>
+                                            <div class="main-wrap__item-desc">
+                                                <div class="main-wrap__item-desc-title">
+                                                    <h3>
+                                                        <a class="main-wrap__item-desc-link" href="">
+                                                            Bamboo Airways tặng khách vé chiều về toàn bộ các chặng nội địa hạng thương gia
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="main-wrap__item-desc-content hide-on-mobile-tablet">
+                                                    <p>
+                                                        Bamboo Airways vừa triển khai chương trình "Mua vé đi, tặng vé về" hạng thương gia trên toàn chặng bay nội địa với mục đích kích cầu khách hàng sử dụng dịch vụ hàng không hơn nữa.
+                                                    </p>
+                                                </div>
+                                                <div class="main-wrap__item-desc-time">
+                                                    12/03/2020
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main-wrap__item">
+                                            <div class="main-wrap__item-img">
+                                                <a class="main-wrap__item-link" href="#">
+                                                    <img alt="Các tỉnh miền Trung đề xuất giải pháp kích cầu du lịch mùa dịch bệnh Covid-19" src="./assets/img/sukien1/360_crop_hoi_an.jpg">
+                                                    </img>
+                                                </a>
+                                            </div>
+                                            <div class="main-wrap__item-desc">
+                                                <div class="main-wrap__item-desc-title">
+                                                    <h3>
+                                                        <a class="main-wrap__item-desc-link" href="">
+                                                            Các tỉnh miền Trung đề xuất giải pháp kích cầu du lịch mùa dịch bệnh Covid-19
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="main-wrap__item-desc-content hide-on-mobile-tablet">
+                                                    <p>
+                                                        Quảng Nam đề xuất miễn vé tham quan phố cổ Hội An và thánh địa Mỹ Sơn, Khánh Hòa giảm giá 50% cho khách lẻ… để kích cầu du lịch, giảm bớt thiệt hại cho ngành trong mùa dịch Covid-19.
+                                                    </p>
+                                                </div>
+                                                <div class="main-wrap__item-desc-time">
+                                                    12/03/2020
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main-wrap__item">
+                                            <div class="main-wrap__item-img">
+                                                <a class="main-wrap__item-link" href="#">
+                                                    <img alt="Tạm đóng cửa nhà tù Hỏa Lò, Hà Nội để phòng dịch Covid-19" src="./assets/img/sukien1/360_crop_nha_tu_Hoa_Lo_Ha_Noi.jpg">
+                                                    </img>
+                                                </a>
+                                            </div>
+                                            <div class="main-wrap__item-desc">
+                                                <div class="main-wrap__item-desc-title">
+                                                    <h3>
+                                                        <a class="main-wrap__item-desc-link" href="">
+                                                            Tạm đóng cửa nhà tù Hỏa Lò, Hà Nội để phòng dịch Covid-19
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="main-wrap__item-desc-content hide-on-mobile-tablet">
+                                                    <p>
+                                                        Nhà tù Hỏa Lò và cùng nhiều di tích lớn ở Hà Nội đã phải đóng cửa để đảm bảo an toàn cho du khách trong tâm bão mùa dịch Covid-19 này.
+                                                    </p>
+                                                </div>
+                                                <div class="main-wrap__item-desc-time">
+                                                    13/03/2020
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main-wrap__item">
+                                            <div class="main-wrap__item-img">
+                                                <a class="main-wrap__item-link" href="#">
+                                                    <img alt="Con đường ven biển dài nhất thế giới sắp mở cửa, 'đồng điệu' các cảnh đẹp nước Anh" src="./assets/img/sukien1/360_crop_Con_duong_ven_bien_dai_nhat_the_gioi_hinh_anh_5.jpg">
+                                                    </img>
+                                                </a>
+                                            </div>
+                                            <div class="main-wrap__item-desc">
+                                                <div class="main-wrap__item-desc-title">
+                                                    <h3>
+                                                        <a class="main-wrap__item-desc-link" href="">
+                                                            Con đường ven biển dài nhất thế giới sắp mở cửa, 'đồng điệu' các cảnh đẹp nước Anh
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="main-wrap__item-desc-content hide-on-mobile-tablet">
+                                                    <p>
+                                                        Lần đầu tiên, khách du lịch có thể tiếp cận con đường ven biển dài nhất thế giới khi England Coast 
+                                            Path National Trail được hoàn thiện trong năm nay, giúp cho mọi người có thể rảo bộ, cắm trại, bơi lội và ngắm 
+                                            nhìn động vật hoang dã trên...
+                                                    </p>
+                                                </div>
+                                                <div class="main-wrap__item-desc-time">
+                                                    14/03/2020
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main-wrap__item">
+                                            <div class="main-wrap__item-img">
+                                                <a class="main-wrap__item-link" href="#">
+                                                    <img alt="Giải cứu 4 người mắc kẹt trong hang núi đá ở Sơn La" src="./assets/img/sukien1/360_crop_3_copy_1583759248_width1004height565.jpg">
+                                                    </img>
+                                                </a>
+                                            </div>
+                                            <div class="main-wrap__item-desc">
+                                                <div class="main-wrap__item-desc-title">
+                                                    <h3>
+                                                        <a class="main-wrap__item-desc-link" href="">
+                                                            Giải cứu 4 người mắc kẹt trong hang núi đá ở Sơn La
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="main-wrap__item-desc-content hide-on-mobile-tablet">
+                                                    <p>
+                                                        Lực lượng chức năng tỉnh Sơn La đã tổ chức giải cứu thành công 4 người mắc kẹt tại hang núi Hài, bản Hài, phường Chiềng An, thành phố Sơn La.
+                                                    </p>
+                                                </div>
+                                                <div class="main-wrap__item-desc-time">
+                                                    15/03/2020
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main-wrap__content-more">
+                                            <a class="main-wrap__content-more-link" href="">
+                                                <span>
+                                                    Xem nhiều hơn
+                                                    <i aria-hidden="true" class="main-wrap__content-more-img fas fa-angle-down">
+                                                    </i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main right -->
+                        <div class="col l-5 m-5 c-0">
+                            <div class="main-right">
+                                <div class="row slide-bar">
+                                    <!-- main right left -->
+                                    <div class="col l-7 m-12 c-12 slide-bar-left">
+                                        <div class="slide-box">
+                                            <div class="slide-box-title">
+                                                <h4>
+                                                    KHUYẾN MÃI
+                                                </h4>
+                                            </div>
+                                            <div class="slide-box-content">
+                                                <div class="box-content__title">
+                                                    <a href="#">
+                                                        Kích cầu du lịch: Combo nghỉ dưỡng FLC 5 sao ưu đãi đến 50%
+                                                    </a>
+                                                </div>
+                                                <div class="box-content-desc">
+                                                    <p>
+                                                        Lữ Hành Việt Nam kết hợp cùng hệ thống khách sạn FLC triển khai gói combo hấp
+                                            dẫn,
+                                            giảm giá đến 50% bao gồm vé máy bay/xe Limousine đưa đón, nghỉ dưỡng tại
+                                            FLC, khởi hành từ Hà Nội.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="slide-box-content">
+                                                <div class="box-content__title">
+                                                    <a href="#">
+                                                        Ưu đãi giá vé đặc biệt từ Hãng hàng không Emirates
+                                                    </a>
+                                                </div>
+                                                <div class="box-content-desc">
+                                                    <p>
+                                                        Hãng hàng không Emirates thực hiện chương trình ưu đãi dành cho hành khách từ nay 
+                                            đến ngày 29/3/2020 với mức giá vé khứ hồi dành cho hạng Phổ thông chỉ từ 13,97 triệu đồng.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="slide-box-content">
+                                                <div class="box-content__title">
+                                                    <a href="#">
+                                                        Khuyến mãi hot: Tour Singapore - Malaysia 4 ngày trọn gói chỉ từ 6,9 triệu đồng
+                                                    </a>
+                                                </div>
+                                                <div class="box-content-desc">
+                                                    <p>
+                                                        Tour Singapore - Malaysia một hành trình 2 quốc gia, đưa du khách đến thăm những thành 
+                                            phố xinh đẹp với nền văn minh tiên tiến và văn hóa đặc sắc, giá chỉ từ 6,9 triệu đồng/người.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- main right rigth -->
+                                    <div class="col l-5 m-0 c-0 slide-bar-right">
+                                        <div class="box-best-view">
+                                            <div class="box-best-view-title">
+                                                TIN XEM NHIỀU
+                                            </div>
+                                            <div class="box-best-view-content">
+                                                <ul class="box-best-view-list">
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            ‘Vũ điệu rửa tay’ phòng Covid-19
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Tổng hợp những quà tặng sức khỏe 8/3 mùa Covid-19 thiết thực và
+                                                ý nghĩa
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Nguồn gốc ngày 8/3 và những ngày ‘Tết Phụ nữ’ trên toàn thế giới
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Du lịch Quy Nhơn – Phú Yên vui chơi 'tẹt ga' chỉ chưa đầy 5
+                                                triệu VNĐ
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Mùa dịch corona: Người dân 'vơ vét' giấy vệ sinh, nhà vệ sinh
+                                                đóng cửa phòng trộm
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Bật mí lý do không được đặt laptop trong túi xách khi qua máy quét an ninh
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Vẻ đẹp độc đáo làng đá cổ Khuổi Ky, Cao Bằng
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            2 bác sĩ trẻ Bệnh viện Nhi đồng TP.HCM hát 'Ông Bà Anh' phiên bản thời dịch nCoV cực chất
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Điểm danh những địa điểm đi chơi 8/3 ở TP HCM dành cho các cặp tình nhân
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            4 điểm du lịch an toàn và hút khách nhất miền Trung
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Căng bụng với những hàng bún riêu ngon nhất ở Hà Nội
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="grid wide">
+            <div class="footer-wrap">
+                <div class="row footer-content">
+                    <div class="col l-6 m-12 c-12">
+                        <div class="footer-wrap-left">
+                            <a class="footer-logo navbar-logo" href="~/">
+                                TravelNews.com
+                            </a>
+                            <div class="footer-info">
+                                <p>
+                                    © 2020 - TravelNews.com
+                                </p>
+                                <p>
+                                    Giấy phép số 1773 / GP - TTĐT
+                                </p>
+                                <p>
+                                    Admin: Nguyễn Đông
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-0 c-0">
+                        <div class="footer-wrap-right">
+                            <p>
+                                Hà Nội: 96 - Định Công - Thanh Xuân - Hà Nội - Tel: (086) 7990219
+                            </p>
+                            <p>
+                                Email: admin@travelnews.com - Hotline: 0987 782 326
+                            </p>
+                            <p>
+                                Biên tập nội dung: Lê Thị Khánh Ly - Nguyễn Mai Hoa
+                            </p>
+                            <p>
+                                Số người online: 5
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            var dropdownItem = document.getElementsByClassName("nav-moblie-sub-menu");
+            var dropdown = document.getElementsByClassName("nav-moblie-menu-item-link");
+            for(var i=1;i< dropdown.length;i++) {
+                    dropdown [i].addEventListener("click", function () {
+                    dropdown[i].setAttribute("href", "javascript:void(0);");
+                    dropdownItem[i-1].style.display = "block";
+            });
+            }
+        </script>
+    </body>
+</html>

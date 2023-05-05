@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>
+            Travel News
+        </title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <script src="ckeditor/ckeditor.js">
+        </script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
+                <link href="./assets/css/style.css" rel="stylesheet"/>
+                <link href="./assets/css/grid.css" rel="stylesheet"/>
+                <link href="./assets/css/responsive.css" rel="stylesheet"/>
+                <link href="./assets/fonts/fontawesome-pro-5.12.0-web/css/all.min.css" rel="stylesheet"/>
+            </link>
+        </link>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="grid wide full-wrap">
+                <div class="navbar-wrap ">
+                    <div class="navbar-header">
+                        <label class="navbar-toggle" for="menu-check">
+                            <i class="navbar-toggle-icon fas fa-bars">
+                            </i>
+                        </label>
+                        <input hidden="" id="menu-check" name="" type="checkbox"/>
+                        <a class="navbar-logo" href="/">
+                            TravelNews.com
+                        </a>
+                        <label class="navbar-overlay" for="menu-check">
+                        </label>
+                        <!--begin NAV mobile,table -->
+                        <div class="navbar-mobile-collapse">
+                            <label class="navbar-mobile-close" for="menu-check">
+                                <i class="navbar-mobile-close-icon far fa-times-circle">
+                                </i>
+                            </label>
+                            <ul class="navbar-moblie-menu">
+                                <li class="nav-moblie-menu-item">
+                                    <a class="nav-moblie-menu-item-link" href="~/Home">
+                                        Trang Chủ
+                                    </a>
+                                </li>
+                                <li class="nav-moblie-menu-item">
+                                    <a class="nav-moblie-menu-item-link" href="~/Tonghop.aspx">
+                                        Tổng Hợp
+                                    </a>
+                                    <ul class="nav-moblie-sub-menu">
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" onclick="preventDefault()">
+                                                Văn hoá
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Lehoi">
+                                                Lễ hội
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Amthuc">
+                                                Ẩm thực
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Danhthang">
+                                                Danh thắng
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-moblie-menu-item">
+                                    <a class="nav-moblie-menu-item-link" onclick="preventDefault()">
+                                        Việt Nam
+                                    </a>
+                                    <ul class="nav-moblie-sub-menu">
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Hanoi">
+                                                Hà nội
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Halong">
+                                                Hạ long
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Danang">
+                                                Đà nẵng
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-moblie-menu-item">
+                                    <a class="nav-moblie-menu-item-link" onclick="preventDefault()">
+                                        Thế Giới
+                                    </a>
+                                    <ul class="nav-moblie-sub-menu">
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Hanoi">
+                                                Singapore
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Halong">
+                                                Dubai
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Danang">
+                                                Trung quốc
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-moblie-menu-item">
+                                    <a class="nav-moblie-menu-item-link" onclick="preventDefault()">
+                                        Sự Kiện
+                                    </a>
+                                    <ul class="nav-moblie-sub-menu">
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Vietnam">
+                                                Việt Nam
+                                            </a>
+                                        </li>
+                                        <li class="sub-nav-moblie-menu-item">
+                                            <a class="sub-nav-moblie-menu-item-link" href="~/Thegioi">
+                                                Thế Giới
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--end NAV mobile,table -->
+                    </div>
+                    <!--begin NAV PC -->
+                    <div class="navbar-collapse collapse hide-on-mobile-tablet" id="nav">
+                        <ul class="nav navbar-menu">
+                            <li class="menu-item">
+                                <a class="menu-item-link" href="~/Home">
+                                    <i class="fas fa-home">
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-item-link" href="~/Tonghop">
+                                    Tổng Hợp
+                                </a>
+                                <ul class="nav-sub-menu">
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Vanhoa">
+                                            Văn hoá
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Lehoi">
+                                            Lễ hội
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Amthuc">
+                                            Ẩm thực
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Danhthang">
+                                            Danh thắng
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-item-link" href="~/CamnangVN">
+                                    Việt Nam
+                                </a>
+                                <ul class="nav-sub-menu">
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Hanoi">
+                                            Hà nội
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Halong">
+                                            Hạ long
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Danang">
+                                            Đà nẵng
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-item-link" href="~/Thegioi">
+                                    Thế Giới
+                                </a>
+                                <ul class="nav-sub-menu">
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Hanoi">
+                                            Singapore
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Halong">
+                                            Dubai
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Danang">
+                                            Trung quốc
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a class="menu-item-link" href="~/Sukien">
+                                    Sự Kiện
+                                </a>
+                                <ul class="nav-sub-menu">
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Vietnam">
+                                            Việt Nam
+                                        </a>
+                                    </li>
+                                    <li class="sub-menu-item">
+                                        <a class="sub-menu-item-link" href="~/Thegioi">
+                                            Thế Giới
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="menu-item nav-avatar">
+                            <!-- <a class="nav-avatar__link" href="/Login.aspx">
+                                Đăng nhập
+                            </a> -->
+                            <div class="nav-avatar-wrap">
+                                <div class="nav-avatar__user">
+                                    Mai Hoa
+                                </div>
+                                <ul class="nav-sub-menu nav-avatar__list">
+                                    <li class="sub-menu-item nav-avatar__list-item">
+                                        <a class="sub-menu-item-link nav-avatar__item-link" href="/QuanLiBaiViet.aspx">
+                                            Quản lí bài viết
+                                        </a>
+                                    </li>
+                                    <li class="nav-avatar__list-item">
+                                        <button class="nav-avartar__btn sub-menu-item-link nav-avatar__item-link" id="btnlogout" name="btn-logout" onclick="btnLogout_click" type="submit" value="true">
+                                            Thoát
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End NAV PC -->
+                </div>
+            </div>
+        </div>
+        <div style="overflow:hidden;">
+            <div class="container body-content">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-7 m-7 c-12">
+                            <div class="main-left">
+                                <div class="slide" id="slide" runat="server">
+                                    <div class="slide-wrap">
+                                        <div class="slide-wrap__item">
+                                            <div class="slide-wrap__item-img">
+                                                <a class="slide-wrap__item-link" href="#">
+                                                    <img alt="" src="./assets/img/slide_show1.jpg"/>
+                                                </a>
+                                            </div>
+                                            <div class="slide-wrap__item-desc">
+                                                <div class="slide-wrap__item-title">
+                                                    <h3>
+                                                        <a href="#">
+                                                            Tổng hợp 6 bãi biển ngắm mặt trời mọc đẹp nhất Việt Nam
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="slide-wrap__item-content">
+                                                    <p>
+                                                        Nếu như hoàng hôn mang đến khung cảnh lãng mạn đậm chất thơ thì
+                                            bình minh tại 6 bãi biển ngắm mặt trời mọc đẹp nhất sẽ khiến bạn cảm thấy tràn
+                                            đầy sức sống.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide-wrap__item">
+                                            <div class="slide-wrap__item-img">
+                                                <a class="slide-wrap__item-link" href="#">
+                                                    <img alt="" src="./assets/img/slide_show2.jpg"/>
+                                                </a>
+                                            </div>
+                                            <div class="slide-wrap__item-desc">
+                                                <div class="slide-wrap__item-title">
+                                                    <h3>
+                                                        <a href="#">
+                                                            Những công trình kiến trúc Pháp nhuốm màu thời gian ở Hà Nội
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="slide-wrap__item-content">
+                                                    <p>
+                                                        Du lịch Hà Nội, bạn không chỉ được thưởng thức những món ngon đặc sản của vùng
+                                            đất cố đô mà còn được chiêm ngưỡng những công trình kiến trúc Pháp nhuốm màu
+                                            thời gian.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide-wrap__item">
+                                            <div class="slide-wrap__item-img">
+                                                <a class="slide-wrap__item-link" href="#">
+                                                    <img alt="" src="./assets/img/slide_show3.jpg"/>
+                                                </a>
+                                            </div>
+                                            <div class="slide-wrap__item-desc">
+                                                <div class="slide-wrap__item-title">
+                                                    <h3>
+                                                        <a href="#">
+                                                            Sức hấp dẫn của quần đảo Cyclades Hy Lạp - ánh sáng từ thiên đường
+                                                của biển cả
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="slide-wrap__item-content">
+                                                    <p>
+                                                        Ánh nắng mặt trời được xem là linh hồn của quần đảo Cyclades ở xứ sở của các vị
+                                            thần.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide-wrap__item">
+                                            <div class="slide-wrap__item-img">
+                                                <a class="slide-wrap__item-link" href="#">
+                                                    <img alt="" src="./assets/img/slide_show4.jpg"/>
+                                                </a>
+                                            </div>
+                                            <div class="slide-wrap__item-desc">
+                                                <div class="slide-wrap__item-title">
+                                                    <h3>
+                                                        <a href="#">
+                                                            Khung cảnh thần tiên ở vườn quốc gia Nam Cát Tiên mùa bướm rừng
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="slide-wrap__item-content">
+                                                    <p>
+                                                        Cứ mỗi độ tháng 3 về, vườn quốc gia Nam Cát Tiên lại khoe sắc rực rỡ bởi những
+                                            cánh bướm
+                                            đa màu sắc. Du lịch thành phố Hồ Chí Minh, ghé thăm vườn quốc gia Nam Cát Tiên
+                                            vào mùa
+                                            bướm rừng bạn sẽ được chiêm ngưỡng khung cảnh tuyệt đẹp như trong những câu
+                                            chuyện thần tiên.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slide-wrap__item">
+                                            <div class="slide-wrap__item-img">
+                                                <a class="slide-wrap__item-link" href="#">
+                                                    <img alt="" src="./assets/img/slide_show5.jpg"/>
+                                                </a>
+                                            </div>
+                                            <div class="slide-wrap__item-desc">
+                                                <div class="slide-wrap__item-title">
+                                                    <h3>
+                                                        <a href="#">
+                                                            Những điểm đến lý tưởng cho các cô nàng nuôi ý định du lịch một
+                                                mình
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div class="slide-wrap__item-content">
+                                                    <p>
+                                                        Đôi khi giữa bao bộn bề và lo toan của cuộc sống, bạn muốn “xách ba lô lên và đi”
+                                            đến
+                                            những nơi thật xa, vậy tại sao lại không tự thưởng cho mình một chuyến du lịch
+                                            một
+                                            mình đến những địa điểm hot trên thế giới, nhất là trong một dịp đặc biệt như
+                                            8/3.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Su kien-->
+                                <div class="main-box" id="suKien" runat="server">
+                                    <div class="main-box__title">
+                                        <div class="main-box__title-left">
+                                            <h2>
+                                                <a class="main-box__title-link" href="">
+                                                    Sự kiện
+                                                </a>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="main-box__content">
+                                        <div class="row">
+                                            <div class="col l-4 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Các tỉnh miền Trung đề xuất giải pháp kích cầu du lịch mùa dịch bệnh Covid-19" src="././assets/img/sukien1/360_crop_hoi_an.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Các tỉnh miền Trung đề xuất giải pháp kích cầu du lịch mùa dịch bệnh Covid-19
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-4 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Tạm đóng cửa nhà tù Hỏa Lò, Hà Nội để phòng dịch Covid-19" src="././assets/img/sukien1/360_crop_nha_tu_Hoa_Lo_Ha_Noi.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Tạm đóng cửa nhà tù Hỏa Lò, Hà Nội để phòng dịch Covid-19
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-4 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="10 đất nước tốt nhất dành cho phái nữ năm 2020" src="././assets/img/sukien1/360_crop_dan_mach_1.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    10 đất nước tốt nhất dành cho phái nữ năm 2020
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-4 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Huế chính thức có ô tô 2 tầng thoáng nóc chở khách du lịch trong đô thị" src="././assets/img/sukien1/360_crop_1_160008_1.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Huế chính thức có ô tô 2 tầng thoáng nóc chở khách du lịch trong đô thị
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-4 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Con đường ven biển dài nhất thế giới sắp mở cửa, 'đồng điệu' các cảnh đẹp nước Anh" src="././assets/img/sukien1/360_crop_Con_duong_ven_bien_dai_nhat_the_gioi_hinh_anh_5.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Con đường ven biển dài nhất thế giới sắp mở cửa, 'đồng điệu' các cảnh đẹp nước Anh
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-4 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Giải cứu 4 người mắc kẹt trong hang núi đá ở Sơn La" src="././assets/img/sukien1/360_crop_3_copy_1583759248_width1004height565.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Giải cứu 4 người mắc kẹt trong hang núi đá ở Sơn La
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main-box__content-more">
+                                            <a class="main-box__content-more-link" href="">
+                                                <span>
+                                                    Xem thêm
+                                                    <i aria-hidden="true" class="main-box__content-more-img fas fa-angle-down">
+                                                    </i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Tong Hop-->
+                                <div class="main-box" id="tongHop" runat="server">
+                                    <div class="main-box__title">
+                                        <div class="main-box__title-left">
+                                            <h2>
+                                                <a class="main-box__title-link" href="">
+                                                    Tổng hợp
+                                                </a>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="main-box__content">
+                                        <div class="row">
+                                            <div class="col l-6 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Những trải nghiệm văn hóa ẩm thực đậm 'chất' khi du lịch Niigata Nhật Bản" src="././assets/img/tonghop/360_crop_10_trai_nghiem_du_lich_Croatia_hinh_anh_dai_dien.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Những trải nghiệm văn hóa ẩm thực đậm 'chất' khi du lịch Niigata Nhật Bản
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-6 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Sức hấp dẫn của quần đảo Cyclades Hy Lạp - ánh sáng từ thiên đường của biển cả" src="././assets/img/tonghop/360_crop_Suc_hap_dan_cua_Cyclades_anh12_1.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Sức hấp dẫn của quần đảo Cyclades Hy Lạp - ánh sáng từ thiên đường của biển cả
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-6 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Vẻ đẹp lớn nơi những thị trấn nhỏ ở Mexico" src="././assets/img/tonghop/360_crop_Niigataanh6.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Vẻ đẹp lớn nơi những thị trấn nhỏ ở Mexico
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-6 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="10 trải nghiệm tuyệt vời nhất cho dân mạo hiểm du lịch Croatia" src="././assets/img/tonghop/360_crop_10_trai_nghiem_du_lich_Croatia_hinh_anh_dai_dien.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    10 trải nghiệm tuyệt vời nhất cho dân mạo hiểm du lịch Croatia
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-6 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Fahion Trucks – những xe tải thời trang ‘du hành’ trên đất Mỹ" src="././assets/img/tonghop/360_crop_nhung__chiec_xe_tai_thoi_trang_tren_dat_my_cover.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Fahion Trucks – những xe tải thời trang ‘du hành’ trên đất Mỹ
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-6 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Du lịch mạo hiểm ở Hawaii: vượt hàng rào đá đồ sộ, khám phá tâm núi lửa, chinh phục bức tường sóng" src="././assets/img/tonghop/360_crop_7_hoat_dong_du_lich_mao_hiem_Hawaii_anh_dai_dien.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Du lịch mạo hiểm ở Hawaii: vượt hàng rào đá đồ sộ, khám phá tâm núi lửa, chinh phục bức tường sóng
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main-box__content-more">
+                                            <a class="main-box__content-more-link" href="">
+                                                <span>
+                                                    Xem thêm
+                                                    <i aria-hidden="true" class="main-box__content-more-img fas fa-angle-down">
+                                                    </i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Viet nam-->
+                                <div class="main-box" id="vietNam" runat="server">
+                                    <div class="main-box__title">
+                                        <div class="main-box__title-left">
+                                            <h2>
+                                                <a class="main-box__title-link" href="">
+                                                    Việt Nam
+                                                </a>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="main-box__content">
+                                        <div class="row">
+                                            <div class="col l-4 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Lộ diện phim trường trên cây ở Ninh Thuận cực đẹp, siêu lạ khiến dân tình ‘đứng ngồi không yên’" src="./assets/img/vietnam/360_crop_621.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Lộ diện phim trường trên cây ở Ninh Thuận cực đẹp, siêu lạ khiến dân tình ‘đứng ngồi không yên’
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-4 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Khu du lịch Vạn Hương Mai An Giang có gì vui mà dân tình du hí 'rần rần'" src="./assets/img/vietnam/560_crop_giuong_luoi_bali_8.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Khu du lịch Vạn Hương Mai An Giang có gì vui mà dân tình du hí 'rần rần'
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-4 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Thì ra Thị Trấn Mơ Đà Lạt chính là 'Tokyo thu nhỏ' giữa thành phố ngàn hoa" src="./assets/img/vietnam/360_crop_thi_tran_mo_da_lat_1.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Thì ra Thị Trấn Mơ Đà Lạt chính là 'Tokyo thu nhỏ' giữa thành phố ngàn hoa
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-4 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Căng bụng với những hàng bún riêu ngon nhất ở Hà Nội" src="./assets/img/vietnam/360_crop_hang_bun_rieu_ngon_nhat_o_ha_noi_2.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Căng bụng với những hàng bún riêu ngon nhất ở Hà Nội
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-4 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Check in liền tay mùa đom đóm ở Ninh Bình lung linh tựa chốn thần tiên" src="./assets/img/vietnam/360_crop_dom_dom_rung_cuc_phuong_ninh_binh.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Check in liền tay mùa đom đóm ở Ninh Bình lung linh tựa chốn thần tiên
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-4 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Rụng rời trước đồi hoa oải hương Sapa tím lịm một vùng trời Fansipan" src="./assets/img/vietnam/360_crop_doi_hoa_oai_huong_sapa_10_1.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Rụng rời trước đồi hoa oải hương Sapa tím lịm một vùng trời Fansipan
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main-box__content-more">
+                                            <a class="main-box__content-more-link" href="">
+                                                <span>
+                                                    Xem thêm
+                                                    <i aria-hidden="true" class="main-box__content-more-img fas fa-angle-down">
+                                                    </i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- The giơi -->
+                                <div class="main-box" id="theGioi" runat="server">
+                                    <div class="main-box__title">
+                                        <div class="main-box__title-left">
+                                            <h2>
+                                                <a class="main-box__title-link" href="">
+                                                    Thế giới
+                                                </a>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="main-box__content">
+                                        <div class="row">
+                                            <div class="col l-6 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Những địa điểm tuyệt vời cho phái nữ du lịch một mình không chỉ dịp 8/3" src="./assets/img/thegioi/360_crop_dia_diem_tuyet_voi_cho_phai_nu_du_lich_mot_minh_9.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Những địa điểm tuyệt vời cho phái nữ du lịch một mình không chỉ dịp 8/3
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-6 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Du lịch sa mạc có gì vui? Đến ngay những nơi này để tìm câu trả lời" src="./assets/img/thegioi/360_crop_Du_lich_sa_mac_co_gi_vui_hinh_anh_1.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Du lịch sa mạc có gì vui? Đến ngay những nơi này để tìm câu trả lời
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-6 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Khám phá điều diệu kỳ trên những cung đường trekking nổi tiếng ở Bắc Mỹ" src="./assets/img/thegioi/360_crop_trekking_duong_mon_Bac_My_anh_dai_dien_1.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Khám phá điều diệu kỳ trên những cung đường trekking nổi tiếng ở Bắc Mỹ
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-6 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Những công trình kiến trúc Pháp nhuốm màu thời gian ở Hà Nội" src="./assets/img/thegioi/360_crop_cong_trinh_kien_truc_phap_1_1.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Những công trình kiến trúc Pháp nhuốm màu thời gian ở Hà Nội
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-6 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Thanh xuân nhất định phải được check-in 10 điểm săn mây đẹp nhất Việt Nam này" src="./assets/img/thegioi/360_crop_diem_san_may_dep_nhat_viet_nam_26.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Thanh xuân nhất định phải được check-in 10 điểm săn mây đẹp nhất Việt Nam này
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col l-6 m-6 c-6">
+                                                <div class="main-box__item">
+                                                    <div class="main-box__item-img">
+                                                        <a class="main-box__item-link" href="#">
+                                                            <img alt="Đi cho bằng hết 5 căn phòng bong bóng ở Việt Nam 'ảo đến từng milimet'" src="./assets/img/thegioi/360_crop_can_phong_bong_bong_1.jpg">
+                                                            </img>
+                                                        </a>
+                                                    </div>
+                                                    <div class="main-box__item-desc">
+                                                        <div class="main-box__item-desc-title">
+                                                            <h3>
+                                                                <a class="main-box__item-link-title" href="#">
+                                                                    Đi cho bằng hết 5 căn phòng bong bóng ở Việt Nam 'ảo đến từng milimet'
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="main-box__content-more">
+                                            <a class="main-box__content-more-link" href="">
+                                                <span>
+                                                    Xem thêm
+                                                    <i aria-hidden="true" class="main-box__content-more-img fas fa-angle-down">
+                                                    </i>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main right -->
+                        <div class="col l-5 m-5 c-0">
+                            <div class="main-right">
+                                <div class="row slide-bar">
+                                    <!-- main right left -->
+                                    <div class="col l-7 m-12 c-12 slide-bar-left">
+                                        <div class="slide-box">
+                                            <div class="slide-box-title">
+                                                <h4>
+                                                    KHUYẾN MÃI
+                                                </h4>
+                                            </div>
+                                            <div class="slide-box-content">
+                                                <div class="box-content__title">
+                                                    <a href="#">
+                                                        Kích cầu du lịch: Combo nghỉ dưỡng FLC 5 sao ưu đãi đến 50%
+                                                    </a>
+                                                </div>
+                                                <div class="box-content-desc">
+                                                    <p>
+                                                        Lữ Hành Việt Nam kết hợp cùng hệ thống khách sạn FLC triển khai gói combo hấp
+                                            dẫn,
+                                            giảm giá đến 50% bao gồm vé máy bay/xe Limousine đưa đón, nghỉ dưỡng tại
+                                            FLC, khởi hành từ Hà Nội.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="slide-box-content">
+                                                <div class="box-content__title">
+                                                    <a href="#">
+                                                        Ưu đãi giá vé đặc biệt từ Hãng hàng không Emirates
+                                                    </a>
+                                                </div>
+                                                <div class="box-content-desc">
+                                                    <p>
+                                                        Hãng hàng không Emirates thực hiện chương trình ưu đãi dành cho hành khách từ nay 
+                                            đến ngày 29/3/2020 với mức giá vé khứ hồi dành cho hạng Phổ thông chỉ từ 13,97 triệu đồng.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="slide-box-content">
+                                                <div class="box-content__title">
+                                                    <a href="#">
+                                                        Khuyến mãi hot: Tour Singapore - Malaysia 4 ngày trọn gói chỉ từ 6,9 triệu đồng
+                                                    </a>
+                                                </div>
+                                                <div class="box-content-desc">
+                                                    <p>
+                                                        Tour Singapore - Malaysia một hành trình 2 quốc gia, đưa du khách đến thăm những thành 
+                                            phố xinh đẹp với nền văn minh tiên tiến và văn hóa đặc sắc, giá chỉ từ 6,9 triệu đồng/người.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- main right rigth -->
+                                    <div class="col l-5 m-0 c-0 slide-bar-right">
+                                        <div class="box-best-view">
+                                            <div class="box-best-view-title">
+                                                TIN XEM NHIỀU
+                                            </div>
+                                            <div class="box-best-view-content">
+                                                <ul class="box-best-view-list">
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            ‘Vũ điệu rửa tay’ phòng Covid-19
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Tổng hợp những quà tặng sức khỏe 8/3 mùa Covid-19 thiết thực và
+                                                ý nghĩa
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Nguồn gốc ngày 8/3 và những ngày ‘Tết Phụ nữ’ trên toàn thế giới
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Du lịch Quy Nhơn – Phú Yên vui chơi 'tẹt ga' chỉ chưa đầy 5
+                                                triệu VNĐ
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Mùa dịch corona: Người dân 'vơ vét' giấy vệ sinh, nhà vệ sinh
+                                                đóng cửa phòng trộm
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Bật mí lý do không được đặt laptop trong túi xách khi qua máy quét an ninh
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Vẻ đẹp độc đáo làng đá cổ Khuổi Ky, Cao Bằng
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            2 bác sĩ trẻ Bệnh viện Nhi đồng TP.HCM hát 'Ông Bà Anh' phiên bản thời dịch nCoV cực chất
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Điểm danh những địa điểm đi chơi 8/3 ở TP HCM dành cho các cặp tình nhân
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            4 điểm du lịch an toàn và hút khách nhất miền Trung
+                                                        </a>
+                                                    </li>
+                                                    <li class="box-best-view-item">
+                                                        <a href="#">
+                                                            Căng bụng với những hàng bún riêu ngon nhất ở Hà Nội
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="grid wide">
+            <div class="footer-wrap">
+                <div class="row footer-content">
+                    <div class="col l-6 m-12 c-12">
+                        <div class="footer-wrap-left">
+                            <a class="footer-logo navbar-logo" href="~/">
+                                TravelNews.com
+                            </a>
+                            <div class="footer-info">
+                                <p>
+                                    © 2020 - TravelNews.com
+                                </p>
+                                <p>
+                                    Giấy phép số 1773 / GP - TTĐT
+                                </p>
+                                <p>
+                                    Admin: Nguyễn Đông
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-0 c-0">
+                        <div class="footer-wrap-right">
+                            <p>
+                                Hà Nội: 96 - Định Công - Thanh Xuân - Hà Nội - Tel: (086) 7990219
+                            </p>
+                            <p>
+                                Email: admin@travelnews.com - Hotline: 0987 782 326
+                            </p>
+                            <p>
+                                Biên tập nội dung: Lê Thị Khánh Ly - Nguyễn Mai Hoa
+                            </p>
+                            <p>
+                                Số người online: 5
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            var dropdownItem = document.getElementsByClassName("nav-moblie-sub-menu");
+        var dropdown = document.getElementsByClassName("nav-moblie-menu-item-link");
+        for(var i=1;i< dropdown.length;i++) {
+                dropdown [i].addEventListener("click", function () {
+                dropdown[i].setAttribute("href", "javascript:void(0);");
+                dropdownItem[i-1].style.display = "block";
+        });
+        }
+        </script>
+        <script defer="" type="text/javascript">
+            var myIndex = 0;
+        carousel();
+        var xxx = setTimeout(carousel, 3000);
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slide-wrap__item");
+            for (i = 0; i < x.length; i++) {
+                //x[i].style.display = "none";
+                x[i].classList.remove("active");
+                x[i].classList.remove("slide-out");
+            }
+            if(myIndex != 0) {x[myIndex-1].classList.add("slide-out");}
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].classList.add("active");
+            x[myIndex - 1].addEventListener("onmouseover", mountHover)
+            x[myIndex - 1].addEventListener("onmouseout", mountOut)
+            //setTimeout(carousel, 3000);
+        }
+        function mountHover() {
+            clearTimeout(xxx);
+        }
+
+        function mountOut() {
+            xxx = setTimeout(carousel, 3000);
+        }
+        </script>
+    </body>
+</html>
